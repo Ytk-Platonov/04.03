@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №2</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Практическая работа №2</h1>
+        <p class="subtitle">Функции и работа с массивами (Интерактивная версия)</p>
+
+        <!-- Задание 1: Калькулятор -->
+        <section class="task-card">
+            <h2>Задание 1. Калькулятор</h2>
+            <div class="input-group">
+                <input type="number" id="calc-a" placeholder="Число A" value="10">
+                <input type="number" id="calc-b" placeholder="Число B" value="5">
+            </div>
+            <div class="buttons">
+                <button onclick="handleCalc('add')">+</button>
+                <button onclick="handleCalc('subtract')">-</button>
+                <button onclick="handleCalc('multiply')">×</button>
+                <button onclick="handleCalc('divide')">÷</button>
+            </div>
+            <div class="result" id="calc-result">Результат: -</div>
+        </section>
+
+        <!-- Задание 2: Среднее арифметическое -->
+        <section class="task-card">
+            <h2>Задание 2. Среднее арифметическое</h2>
+            <div class="input-group">
+                <label for="avg-input">Введите числа через запятую:</label>
+                <input type="text" id="avg-input" placeholder="Например: 5, 4, 3, 5, 4" value="5, 4, 3, 5, 4">
+            </div>
+            <button onclick="handleAverage()">Рассчитать средний балл</button>
+            <div class="result" id="avg-result">Результат: -</div>
+        </section>
+
+        <!-- Задание 3: Обратный порядок -->
+        <section class="task-card">
+            <h2>Задание 3. Обратный порядок</h2>
+            <div class="input-group">
+                <label for="reverse-input">Введите элементы через запятую:</label>
+                <input type="text" id="reverse-input" placeholder="Например: 1, 2, 3, 4, 5" value="1, 2, 3, 4, 5">
+            </div>
+            <button onclick="handleReverse()">Перевернуть массив</button>
+            <div class="result" id="reverse-result">Результат: -</div>
+        </section>
+
+        <!-- Задание 4: Уникальные элементы -->
+        <section class="task-card">
+            <h2>Задание 4. Уникальные элементы</h2>
+            <div class="input-group">
+                <label for="unique-input">Введите элементы с дубликатами:</label>
+                <input type="text" id="unique-input" placeholder="Например: 1, 2, 2, 3, 4, 4, 5, 1" value="1, 2, 2, 3, 4, 4, 5, 1">
+            </div>
+            <button onclick="handleUnique()">Убрать дубликаты</button>
+            <div class="result" id="unique-result">Результат: -</div>
+        </section>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>

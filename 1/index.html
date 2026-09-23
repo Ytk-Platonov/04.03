@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная №1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторная работа №1</h1>
+        <p class="subtitle">Выполнение заданий с использованием переменных и форм ввода</p>
+        
+        <!-- Кнопка для начала выполнения заданий -->
+        <div class="start-section">
+            <button id="startBtn" class="btn btn-primary">Начать выполнение заданий</button>
+        </div>
+        
+        <!-- Контейнер для заданий (скрыт по умолчанию) -->
+        <div id="tasksContainer" class="tasks-container hidden">
+            
+            <!-- Задание 1: Калькулятор возраста -->
+            <div class="task-card">
+                <h2>Задание 1. Калькулятор возраста</h2>
+                <div class="input-group">
+                    <label for="birthYear">Введите год рождения:</label>
+                    <input type="number" id="birthYear" placeholder="2000" min="1900" max="2026">
+                </div>
+                <button onclick="calculateAge()" class="btn btn-secondary">Рассчитать возраст</button>
+                <div id="ageResult" class="result"></div>
+            </div>
+            
+            <!-- Задание 2: Таблица умножения на 5 -->
+            <div class="task-card">
+                <h2>Задание 2. Таблица умножения на 5</h2>
+                <button onclick="showMultiplicationTable()" class="btn btn-secondary">Показать таблицу</button>
+                <div id="tableResult" class="result multiplication-table"></div>
+            </div>
+            
+            <!-- Задание 3: Поиск максимума из трёх чисел -->
+            <div class="task-card">
+                <h2>Задание 3. Поиск максимума из трёх чисел</h2>
+                <div class="input-group">
+                    <label for="firstNumber">Первое число:</label>
+                    <input type="number" id="firstNumber" placeholder="10">
+                </div>
+                <div class="input-group">
+                    <label for="secondNumber">Второе число:</label>
+                    <input type="number" id="secondNumber" placeholder="20">
+                </div>
+                <div class="input-group">
+                    <label for="thirdNumber">Третье число:</label>
+                    <input type="number" id="thirdNumber" placeholder="30">
+                </div>
+                <button onclick="findMaximum()" class="btn btn-secondary">Найти максимум</button>
+                <div id="maxResult" class="result"></div>
+            </div>
+            
+            <!-- Задание 4: Факториал числа N -->
+            <div class="task-card">
+                <h2>Задание 4. Факториал числа N</h2>
+                <div class="input-group">
+                    <label for="factorialN">Введите число N (0-170):</label>
+                    <input type="number" id="factorialN" placeholder="5" min="0" max="170">
+                </div>
+                <button onclick="calculateFactorial()" class="btn btn-secondary">Вычислить факториал</button>
+                <div id="factorialResult" class="result"></div>
+            </div>
+            
+        </div>
+        
+        <!-- Сообщение об отмене -->
+        <div id="cancelMessage" class="message hidden">
+            <p>Вы отменили выполнение заданий.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
